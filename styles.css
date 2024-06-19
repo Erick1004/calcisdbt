@@ -1,78 +1,60 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+font-family: Arial, sans-serif;
 }
 
 .calculadora {
-    width: 100%;
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+width: 100%;
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 10px;
+background-color: #f9f9f9;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 20px;
 }
 
 thead th {
-    background-color: #007BFF;
-    color: white;
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+background-color: #f2f2f2;
+border: 1px solid #ddd;
+padding: 8px;
+text-align: center;
 }
 
-tbody td, tbody th {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    background-color: #fff; /* Asegura un fondo blanco consistente */
+tbody td {
+border: 1px solid #ddd;
+padding: 8px;
+text-align: center;
 }
 
-tbody th {
-    background-color: #f9f9f9;
+select {
+width: 100%;
+padding: 5px;
+margin: 5px 0;
+border: 1px solid #ddd;
+border-radius: 4px;
 }
 
-select, input[type="number"] {
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
+input[type="submit"] {
+display: block;
+width: 100%;
+padding: 10px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
 }
 
-button.btn {
-    display: inline-block;
-    width: 48%;
-    padding: 10px;
-    margin: 5px 1%;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+input[type="submit"]
+{
+background-color: #45a049;
 }
 
-button#borrar.btn {
-    background-color: #dc3545;
+.pantalla {
+font-weight: bold;
 }
-
-button.btn:hover {
-    opacity: 0.9;
-}
-
-.pantalla1, .pantalla2, .pantalla3, .pantalla-total {
-    font-weight: bold;
-    background-color: transparent; /* Asegura un fondo transparente para evitar resaltar */
-}
-
