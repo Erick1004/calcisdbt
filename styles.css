@@ -34,6 +34,7 @@ tbody td, tbody th {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
+    background-color: #fff; /* Asegura un fondo blanco consistente */
 }
 
 tbody th {
@@ -72,5 +73,6 @@ button.btn:hover {
 
 .pantalla1, .pantalla2, .pantalla3, .pantalla-total {
     font-weight: bold;
+    background-color: transparent; /* Asegura un fondo transparente para evitar resaltar */
 }
 
