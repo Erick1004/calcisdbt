@@ -14,6 +14,11 @@ let mda = document.getElementById("mod1");
 let mdb = document.getElementById("mod2");
 let mdc = document.getElementById("mod3");
 
+// Función para validar que la suma de segmentos no exceda 13
+function validarSegmentos(segav, segbv, segcv) {
+    return (segav + segbv + segcv) <= 13;
+}
+
 botones.forEach(boton => {
     boton.addEventListener("click", () => {
         const botonApretado = boton.textContent;
@@ -27,6 +32,13 @@ botones.forEach(boton => {
         var mdav = mda.options[mda.selectedIndex].value;
         var mdbv = mdb.options[mdb.selectedIndex].value;
         var mdcv = mdc.options[mdc.selectedIndex].value;
+        
+        
+        if (!validarSegmentos(segav, segbv, segcv)) {
+            alert('El total de segmentos en A, B y C no puede exceder 13. Ajuste los valores.');
+            return;
+        }
+        
         const tasaMbpsa = calculateKbps(segav, cdav, mdav, guardav);
         const tasaMbpsb = calculateKbps(segbv, cdbv, mdbv, guardav);
         const tasaMbpsc = calculateKbps(segcv, cdcv, mdcv, guardav);
