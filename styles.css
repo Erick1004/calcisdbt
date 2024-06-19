@@ -5,6 +5,29 @@ body {
     padding: 0;
 }
 
+.header {
+    text-align: center; /* Alinea el texto al centro dentro del header */
+    margin: 20px 0; /* Añade margen arriba y abajo para separar del contenido */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.header h2 {
+    margin: 5px 0;
+    font-size: 20px;
+    color: #666;
+}
+
+.header h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #999;
+}
+
 .calculadora {
     width: 100%;
     max-width: 800px;
