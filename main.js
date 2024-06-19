@@ -16,7 +16,7 @@ let mdc = document.getElementById("mod3");
 
 // Función para validar que la suma de segmentos no exceda 13
 function validarSegmentos(segav, segbv, segcv) {
-    return (segav + segbv + segcv) <= 13;
+    return (segav + segbv + segcv) >= 13;
 }
 
 botones.forEach(boton => {
