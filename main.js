@@ -40,7 +40,7 @@ botones.forEach(boton => {
         
         
         if (!validarSegmentos(segav, segbv, segcv)) {
-            alert('La suma total de segmentos en A, B y C no puede exceder 13. Ajuste los valores.');
+            alert('La suma total de los segmentos en A, B y C no puede exceder 13. Escriba otros valores.');
             return;
         }
         
