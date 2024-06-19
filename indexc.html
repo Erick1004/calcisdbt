@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+</head>
+<body>
+    <div class="calculadora">
+
+            <th>Intervalo de Guarda</th>
+            <td>
+                <select name="InGuarda" id="guarda">
+                    <option value="0">0</option>
+                    <option value="0.25">1/4</option>
+                    <option value="0.125">1/8</option>
+                    <option value="0.0625">1/16</option>
+                    <option value="0.03125">1/32</option>
+                </select>
+            </td>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Modo</th>
+                        <th>Numero de Segmentos</th>
+                        <th>Tasa de Código</th>
+                        <th>Modulación</th>
+                        <th>Tasa de Datos</th>
+                        <th></th>
+                        <th>Tasa de Datos</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <th>A</th>
+                        <td>
+                            <input type="number" id="seg1" value="0" />
+                        </td>
+                        <td>
+                            <select name="Convolucional" id="cd_conv1">
+                                <option value="0">0</option>
+                                <option value="0.5">1/2</option>
+                                <option value="0.666">2/3</option>
+                                <option value="0.75">3/4</option>
+                                <option value="0.833">5/6</option>
+                                <option value="0.875">7/8</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="Modulacion" id="mod1">
+                                <option value="0">0</option>
+                                <option value="4">QPSK</option>
+                                <option value="16">16QAM</option>
+                                <option value="64">64QAM</option>
+                            </select>
+                        </td>
+                        
+                        <td class="pantalla1">0</td>
+                        <td>[Kbps]</td>
+                        <td class="pantalla2">0</td>
+                        <td>[Mbps]</td>
+                    </tr>
+                    <tr>
+                      <th>B</th>
+                      <td>
+                        <input type="number" id="seg2" value="0"/>
+                        </td>
+                        <td>
+                            <select name="Convolucional" id="cd_conv2">
+                                <option value="0">0</option>
+                                <option value="0.5">1/2</option>
+                                <option value="0.666">2/3</option>
+                                <option value="0.75">3/4</option>
+                                <option value="0.833">5/6</option>
+                                <option value="0.875">7/8</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="Modulacion" id="mod2">
+                                <option value="0">0</option>
+                                <option value="4">QPSK</option>
+                                <option value="16">16QAM</option>
+                                <option value="64">64QAM</option>
+                            </select>
+                        </td>
+                        <td class="pantalla3">0</td>
+                        <td>[Kbps]</td>
+                        <td class="pantalla4">0</td>
+                        <td>[Mbps]</td>
+                    </tr>
+                    <tr>
+                      <th>C</th>
+                      <td>
+                        <input type="number" id="seg3" value="0"/>
+                        </td>
+                        <td>
+                            <select name="Convolucional" id="cd_conv3">
+                                <option value="0">0</option>
+                                <option value="0.5">1/2</option>
+                                <option value="0.666">2/3</option>
+                                <option value="0.75">3/4</option>
+                                <option value="0.833">5/6</option>
+                                <option value="0.875">7/8</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="Modulacion" id="mod3">
+                                <option value="0">0</option>
+                                <option value="4">QPSK</option>
+                                <option value="16">16QAM</option>
+                                <option value="64">64QAM</option>
+                            </select>
+                        </td>
+
+                        <td class="pantalla5">0</td>
+                        <td>[Kbps]</td>
+                        <td class="pantalla6">0</td>
+                        <td>[Mbps]</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Total</td>
+                        <td class="total-kbps">0</td>
+                        <td>[Kbps]</td>
+                        <td class="total-mbps">0</td>
+                        <td>[Mbps]</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="calcular" class="btn">Calcular</button>
+            <button id="borrar" class="btn">Borrar</button>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
