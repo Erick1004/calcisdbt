@@ -1,12 +1,12 @@
 body {
-font-family: Arial, sans-serif;
-background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
 .calculadora {
-width: 100%;
+    width: 100%;
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
@@ -17,48 +17,60 @@ width: 100%;
 }
 
 table {
-width: 100%;
-border-collapse: collapse;
-margin-bottom: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
 thead th {
-background-color: #f2f2f2;
-border: 1px solid #ddd;
-padding: 8px;
-text-align: center;
+    background-color: #007BFF;
+    color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
 }
 
-tbody td {
-border: 1px solid #ddd;
-padding: 8px;
-text-align: center;
+tbody td, tbody th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
 }
 
-select {
-width: 100%;
-padding: 5px;
-margin: 5px 0;
-border: 1px solid #ddd;
-border-radius: 4px;
+tbody th {
+    background-color: #f9f9f9;
 }
 
-input[type="submit"] {
-display: block;
-width: 100%;
-padding: 10px;
-background-color: #4CAF50;
-color: white;
-border: none;
-border-radius: 4px;
-cursor: pointer;
+select, input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-input[type="submit"]
-{
-background-color: #45a049;
+button.btn {
+    display: inline-block;
+    width: 48%;
+    padding: 10px;
+    margin: 5px 1%;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.pantalla {
-font-weight: bold;
+button#borrar.btn {
+    background-color: #dc3545;
 }
+
+button.btn:hover {
+    opacity: 0.9;
+}
+
+.pantalla1, .pantalla2, .pantalla3, .pantalla-total {
+    font-weight: bold;
+}
+
