@@ -16,22 +16,27 @@ let mdc = document.getElementById("mod3");
 
 // Función para validar que la suma de segmentos no exceda 13
 function validarSegmentos(segav, segbv, segcv) {
-    return (segav + segbv + segcv) < 13;
+    return (segav + segbv + segcv) <= 13;
 }
 
 botones.forEach(boton => {
     boton.addEventListener("click", () => {
         const botonApretado = boton.textContent;
-        var guardav = guarda.options[guarda.selectedIndex].value;
-        segav = sega.value;
-        segbv = segb.value;
-        segcv = segc.value;
-        var cdav = cda.options[cda.selectedIndex].value;
-        var cdbv = cdb.options[cdb.selectedIndex].value;
-        var cdcv = cdc.options[cdc.selectedIndex].value;
-        var mdav = mda.options[mda.selectedIndex].value;
-        var mdbv = mdb.options[mdb.selectedIndex].value;
-        var mdcv = mdc.options[mdc.selectedIndex].value;
+
+
+        let guardav = guarda.options[guarda.selectedIndex].value;
+
+        let segav = parseInt(sega.value) || 0;
+        let segbv = parseInt(segb.value) || 0;
+        let segcv = parseInt(segc.value) || 0;
+
+        let cdav = parseFloat(cda.value) || 0;
+        let cdbv = parseFloat(cdb.value) || 0;
+        let cdcv = parseFloat(cdc.value) || 0;
+
+        let mdav = parseInt(mda.value) || 0;
+        let mdbv = parseInt(mdb.value) || 0;
+        let mdcv = parseInt(mdc.value) || 0;
         
         
         if (!validarSegmentos(segav, segbv, segcv)) {
