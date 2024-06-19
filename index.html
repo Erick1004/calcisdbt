@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración ISDB-T</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .layer {
+            margin-bottom: 20px;
+        }
+
+        .layer h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .layer label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .layer input,
+        .layer select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+
+        #result p {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .message {
+            padding: 10px;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            border-radius: 4px;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Configuración de Parámetros ISDB-T</h1>
+        <form id="config-form">
+            <div class="general-settings">
+                <h2>Configuración General</h2>
+                <label for="guardInterval">Tiempo de Guarda:</label>
+                <select id="guardInterval" name="guardInterval" required>
+                    <option value="1/4">1/4</option>
+                    <option value="1/8">1/8</option>
+                    <option value="1/16">1/16</option>
+                    <option value="1/32">1/32</option>
+                </select>
+            </div>
+            <div class="layer">
+                <h2>Capa A</h2>
+                <label for="segmentsA">Número de Segmentos:</label>
+                <input type="number" id="segmentsA" name="segmentsA" min="0" max="13" required>
+                
+                <label for="modulationA">Modulación:</label>
+                <select id="modulationA" name="modulationA" required>
+                    <option value="qpsk">QPSK</option>
+                    <option value="16qam">16-QAM</option>
+                    <option value="64qam">64-QAM</option>
+                </select>
+
+                <label for="codeRateA">Tasa de Código:</label>
+                <select id="codeRateA" name="codeRateA" required>
+                    <option value="1/2">1/2</option>
+                    <option value="2/3">2/3</option>
+                    <option value="3/4">3/4</option>
+                    <option value="5/6">5/6</option>
+                    <option value="7/8">7/8</option>
+                </select>
+            </div>
+            <div class="layer">
+                <h2>Capa B</h2>
+                <label for="segmentsB">Número de Segmentos:</label>
+                <input type="number" id="segmentsB" name="segmentsB" min="0" max="13" required>
+                
+                <label for="modulationB">Modulación:</label>
+                <select id="modulationB" name="modulationB" required>
+                    <option value="qpsk">QPSK</option>
+                    <option value="16qam">16-QAM</option>
+                    <option value="64qam">64-QAM</option>
+                </select>
+
+                <label for="codeRateB">Tasa de Código:</label>
+                <select id="codeRateB" name="codeRateB" required>
+                    <option value="1/2">1/2</option>
+                    <option value="2/3">2/3</option>
+                    <option value="3/4">3/4</option>
+                    <option value="5/6">5/6</option>
+                    <option value="7/8">7/8</option>
+                </select>
+            </div>
+            <div class="layer">
+                <h2>Capa C</h2>
+                <label for="segmentsC">Número de Segmentos:</label>
+                <input type="number" id="segmentsC" name="segmentsC" min="0" max="13" required>
+                
+                <label for="modulationC">Modulación:</label>
+                <select id="modulationC" name="modulationC" required>
+                    <option value="qpsk">QPSK</option>
+                    <option value="16qam">16-QAM</option>
+                    <option value="64qam">64-QAM</option>
+                </select>
+
+                <label for="codeRateC">Tasa de Código:</label>
+                <select id="codeRateC" name="codeRateC" required>
+                    <option value="1/2">1/2</option>
+                    <option value="2/3">2/3</option>
+                    <option value="3/4">3/4</option>
+                    <option value="5/6">5/6</option>
+                    <option value="7/8">7/8</option>
+                </select>
+            </div>
+            <button type="button" onclick="calculateDataRates()">Calcular Tasa de Datos</button>
+            <div class="message" id="message"></div>
+        </form>
+
+        <div id="result">
+            <h2>Resultado de la Configuración</h2>
+            <p id="dataRateA"></p>
+            <p id="dataRateB"></p>
+            <p id="dataRateC"></p>
+            <p id="totalDataRate"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
